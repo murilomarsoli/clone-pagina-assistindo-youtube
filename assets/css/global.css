@@ -1,0 +1,7 @@
+@import url(''); /* importar a fonte a ser utilizada */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,88 @@
+@import url('global.css');
+
+/* LAYOUT GERAL DO SITE */
+
+header {
+  width: 100vw;
+  height: 6.5vh;
+  background-color: rgba(252, 0, 0, 0.397);
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row; /* row: valor-padrão do flex */
+}
+
+.reproducao-video {
+  width: 74vw;
+  height: 93.5vh;
+  background-color: rgba(0, 0, 255, 0.438);
+}
+
+.videos-recomendados {
+  width: 26vw;
+  height: 93.5vh;
+  background-color: rgba(255, 196, 0, 0.397);
+}
+
+/* DESENVOLVIMENTO DO HEADER */
+
+.header-left,
+.header-right {
+  width: 15%;
+  height: 100%;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+}
+
+.menu-sup-esquerdo img,
+.logo-ytb img {
+  width: 100%;
+}
+
+.menu-sup-esquerdo {
+  width: 23px;
+  margin-right: 26px;
+}
+
+.logo-ytb {
+  width: 90px;
+}
+
+.BR { /* complementação da logo do youtube */
+  margin-left: 4px;
+  position: relative;
+  bottom: 13px;
+  color: rgb(71, 71, 71);
+  font-size: 12px;
+}
+
+/* ponto de parada 18/01/24 */
+.header-center {
+  width: 63%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.input-pesquisar input {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.input-pesquisar {
+  width: 600px;
+  height: 40px;
+}
+
+
+
+
+
+
