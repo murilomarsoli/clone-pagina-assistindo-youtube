@@ -5,7 +5,6 @@
 header {
   width: 100vw;
   height: 6.5vh;
-  background-color: rgba(252, 0, 0, 0.397);
   display: flex;
   justify-content: space-around;
 }
@@ -33,14 +32,18 @@ header {
 .header-right {
   width: 15%;
   height: 100%;
-  background-color: white;
   display: inline-flex;
   align-items: center;
+}
+
+.header-right {
+  justify-content: center;
 }
 
 .menu-sup-esquerdo img,
 .logo-ytb img {
   width: 100%;
+  height: 100%;
 }
 
 .menu-sup-esquerdo {
@@ -60,29 +63,114 @@ header {
   font-size: 12px;
 }
 
-/* ponto de parada 18/01/24 */
 .header-center {
   width: 63%;
   height: 100%;
   background-color: white;
   display: flex;
-  padding: 10px 0;
+  padding: 10px 50px 10px 0px;
   justify-content: center;
+}
+
+.input-pesquisar {
+  width: 530px;
+  height: 40px;
 }
 
 .input-pesquisar input {
   width: 100%;
   height: 100%;
-  border-radius: 40px;
+  box-shadow: 0px 0px 3px inset rgba(63, 63, 63, 0.300);
+  border-radius: 40px 0 0 40px; /* sup esq, sup dir, inf dir, inf esq */
+  padding: 2px 15px;
+  font-size: 16px;
+  color: gray;
+  border: 1px solid rgb(194, 194, 194);
 }
 
-.input-pesquisar {
-  width: 600px;
+.input-pesquisar input:focus {
+  box-shadow: 0px 0px 6px inset rgba(63, 63, 63, 0.400);
+  border: 1px solid cornflowerblue;
+  outline: none;
+}
+
+.button-pesquisar { /* seleciona o irmão direto (mais próximo) da classe "input-pesquisar" */
+  width: 65px;
   height: 40px;
+  box-shadow: 0px 0px 3px inset rgba(63, 63, 63, 0.080);
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 0px 40px 40px 0px;
+  border-left: none;
+  background-color: rgba(167, 167, 167, 0.199);
 }
 
+.button-pesquisar img {
+  width: 23px;
+  position: relative;
+  right: 2px;
+}
 
+.button-pesquisar a {
+  display: block; /* a âncora da imagem passa a pegar no elemento inteiro (o botão passa a funcionar pela âncora do icon de pesquisar) */
+}
 
+.button-pesquisar:hover {
+  background-color: rgba(59, 59, 59, 0.150);
+}
 
+.button-pesquisar:active {
+  background-color: rgba(14, 13, 13, 0.164);
+}
 
+.opcoes-meu-perfil {
+  display: flex;
+  width: 200px;
+  height: 62px; 
+  padding: 10px 10px;
+  position: relative;
+  left: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 
+.botao-criar,
+.botao-notificacao,
+.botao-meu-perfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+  height: 100%;
+}
+
+.botao-criar img,
+.botao-notificacao img {
+  position: relative;
+  width: 22px;
+}
+
+.botao-criar:hover,
+.botao-notificacao:hover {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.089);
+  cursor: pointer;
+}
+
+.botao-criar:active,
+.botao-notificacao:active {
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.imagem-meu-perfil {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-image: url("/assets/images/meuretrato.jpg");
+  background-size: contain;
+  outline: none;
+}
+
+/* ponto de parada 20/01/24, finalização do header */
