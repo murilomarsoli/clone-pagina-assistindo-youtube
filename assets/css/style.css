@@ -1,6 +1,8 @@
 @import url('global.css');
 
-/* LAYOUT GERAL DO SITE */
+body {
+  overflow-x: hidden;
+}
 
 header {
   width: 100vw;
@@ -17,7 +19,7 @@ header {
 .reproducao-video {
   width: 74vw;
   height: 93.5vh;
-  background-color: rgba(0, 0, 255, 0.438);
+/*   background-color: rgba(0, 0, 255, 0.438); */
 }
 
 .videos-recomendados {
@@ -25,8 +27,6 @@ header {
   height: 93.5vh;
   background-color: rgba(255, 196, 0, 0.397);
 }
-
-/* DESENVOLVIMENTO DO HEADER */
 
 .header-left,
 .header-right {
@@ -40,6 +40,21 @@ header {
   justify-content: center;
 }
 
+.botao-menu-sup-esquerdo {
+  padding: 4px 6px;
+}
+
+.botao-menu-sup-esquerdo:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.089);
+  border-radius: 50%;
+  transition: background-color 0.15s;
+}
+
+.botao-menu-sup-esquerdo:active {
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
 .menu-sup-esquerdo img,
 .logo-ytb img {
   width: 100%;
@@ -48,11 +63,11 @@ header {
 
 .menu-sup-esquerdo {
   width: 23px;
-  margin-right: 26px;
 }
 
 .logo-ytb {
   width: 90px;
+  margin-left: 26px;
 }
 
 .BR { /* complementação da logo do youtube */
@@ -157,6 +172,7 @@ header {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.089);
   cursor: pointer;
+  transition: background-color 0.10s;
 }
 
 .botao-criar:active,
@@ -177,4 +193,133 @@ header {
   border: 2px solid cornflowerblue;
 }
 
+.flex-container {
+  display: flex;
+}
 
+.reproducao-video {
+  display: flexbox;
+  justify-content: center;
+  padding: 20px 10px 10px 100px;
+}
+
+.main-video {
+  width: 1280px;
+  height: 720px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.video-description h1 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.video-description {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.interacao-video {
+  width: 60vw;
+  height: fit-content;
+  display: flex;
+  gap: 42px;
+  font-size: 14px;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.imagem-canal {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-image: url("/assets/images/Channel\ Avatar.svg");
+  background-size: contain;
+  outline: none;
+}
+
+.perfil-canal-video {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nome-perfil-inscritos a {
+  text-decoration: none;
+  color: black;
+}
+
+#nome-canal {
+  font-weight: bold;
+}
+
+#quantidade-inscritos {
+  color: rgb(90, 90, 90);
+}
+
+.botao-inscrever-se button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 2px;
+  background-color: rgb(197, 10, 10);
+  color: white;
+  font-weight: 700;
+}
+
+.botao-inscrever-se button:hover {
+  cursor: pointer;
+  background-color: rgba(223, 10, 10, 0.87);
+  transition: background-color 0.10s;
+}
+
+.botao-inscrever-se button:active {
+  background-color: rgb(197, 10, 10);
+}
+
+.like-video,
+.deslike-video,
+.compartilhar-video,
+.download-video {
+  display: flex;
+  text-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  font-weight: 500;
+}
+
+.botao-interacao-video {
+  text-decoration: none;
+  color: black;
+}
+
+.like-video:hover,
+.deslike-video:hover,
+.compartilhar-video:hover,
+.download-video:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.089);
+  border-radius: 20px;
+  transition: background-color 0.10s;
+}
+
+.like-video:active,
+.deslike-video:active,
+.compartilhar-video:active,
+.download-video:active {
+  background-color: rgba(0, 0, 0, 0.24); /* active */
+}
+
+.visualizacoes-data-video span {
+  margin-right: 12px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.descricao-video {
+  width: 900px;
+  margin-top: 12px;
+}
