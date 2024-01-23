@@ -1,4 +1,4 @@
-@import url('global.css');
+@import url("global.css");
 
 body {
   overflow-x: hidden;
@@ -17,15 +17,19 @@ header {
 }
 
 .reproducao-video {
-  width: 74vw;
+  width: 73vw;
   height: 93.5vh;
-/*   background-color: rgba(0, 0, 255, 0.438); */
+  /*   background-color: rgba(0, 0, 255, 0.438); */
 }
 
 .videos-recomendados {
   width: 26vw;
-  height: 93.5vh;
-  background-color: rgba(255, 196, 0, 0.397);
+  height: auto;
+  padding: 16px 20px 10px 0px;
+}
+
+.videos-recomendados a {
+  text-decoration: none;
 }
 
 .header-left,
@@ -70,7 +74,8 @@ header {
   margin-left: 26px;
 }
 
-.BR { /* complementação da logo do youtube */
+.BR {
+  /* complementação da logo do youtube */
   margin-left: 4px;
   position: relative;
   bottom: 13px;
@@ -95,7 +100,7 @@ header {
 .input-pesquisar input {
   width: 100%;
   height: 100%;
-  box-shadow: 0px 0px 3px inset rgba(63, 63, 63, 0.300);
+  box-shadow: 0px 0px 3px inset rgba(63, 63, 63, 0.3);
   border-radius: 40px 0 0 40px; /* sup esq, sup dir, inf dir, inf esq */
   padding: 2px 15px;
   font-size: 16px;
@@ -104,15 +109,16 @@ header {
 }
 
 .input-pesquisar input:focus {
-  box-shadow: 0px 0px 6px inset rgba(63, 63, 63, 0.400);
+  box-shadow: 0px 0px 6px inset rgba(63, 63, 63, 0.4);
   border: 1px solid cornflowerblue;
   outline: none;
 }
 
-.button-pesquisar { /* seleciona o irmão direto (mais próximo) da classe "input-pesquisar" */
+.button-pesquisar {
+  /* seleciona o irmão direto (mais próximo) da classe "input-pesquisar" */
   width: 65px;
   height: 40px;
-  box-shadow: 0px 0px 3px inset rgba(63, 63, 63, 0.080);
+  box-shadow: 0px 0px 3px inset rgba(63, 63, 63, 0.08);
   border: 1px solid rgb(194, 194, 194);
   border-radius: 0px 40px 40px 0px;
   border-left: none;
@@ -130,7 +136,7 @@ header {
 }
 
 .button-pesquisar:hover {
-  background-color: rgba(59, 59, 59, 0.150);
+  background-color: rgba(59, 59, 59, 0.15);
 }
 
 .button-pesquisar:active {
@@ -140,7 +146,7 @@ header {
 .opcoes-meu-perfil {
   display: flex;
   width: 200px;
-  height: 62px; 
+  height: 62px;
   padding: 10px 10px;
   position: relative;
   left: 50px;
@@ -172,7 +178,7 @@ header {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.089);
   cursor: pointer;
-  transition: background-color 0.10s;
+  transition: background-color 0.1s;
 }
 
 .botao-criar:active,
@@ -206,7 +212,7 @@ header {
 .main-video {
   width: 1280px;
   height: 720px;
-  border-radius: 20px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -256,7 +262,7 @@ header {
 }
 
 #quantidade-inscritos {
-  color: rgb(90, 90, 90);
+  color: #606060;
 }
 
 .botao-inscrever-se button {
@@ -272,7 +278,7 @@ header {
 .botao-inscrever-se button:hover {
   cursor: pointer;
   background-color: rgba(223, 10, 10, 0.87);
-  transition: background-color 0.10s;
+  transition: background-color 0.1s;
 }
 
 .botao-inscrever-se button:active {
@@ -303,7 +309,7 @@ header {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.089);
   border-radius: 20px;
-  transition: background-color 0.10s;
+  transition: background-color 0.1s;
 }
 
 .like-video:active,
@@ -322,4 +328,56 @@ header {
 .descricao-video {
   width: 900px;
   margin-top: 12px;
+}
+
+.card-video {
+  display: flex;
+  width: auto;
+  height: 100px;
+  margin-bottom: 8px;
+  margin-right: 80px;
+  padding: 4px 4px;
+  border-radius: 12px;
+  gap: 0px;
+  transition: background-color 0.15s;
+}
+
+.card-video:active {
+  background-color: rgba(0, 0, 0, 0.185);
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(15, 15, 15);
+  margin-bottom: 4px;
+}
+
+.card-thumb {
+  background-color: rgba(222, 184, 135, 0.534);
+  width: 165px;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-thumb img {
+  width: 100%;
+}
+
+.card-description {
+  width: 210px;
+  height: 100%;
+  padding: 0px 5px 5px 8px;
+}
+
+.card-data {
+  font-size: 12px;
+  color: #606060;
+  margin-bottom: 4px;
+}
+
+#middot {
+  font-weight: 900;
+  font-size: 12px;
 }
